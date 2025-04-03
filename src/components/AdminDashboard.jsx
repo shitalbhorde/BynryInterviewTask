@@ -179,7 +179,6 @@ function AdminDashboard() {
     required
   />
   
-  {/* File Upload Button */}
   <input
     type="file"
     accept="image/*"
@@ -196,7 +195,6 @@ function AdminDashboard() {
     }}
   />
 
-  {/* Image Preview */}
   {formData.photo && (
     <img
       src={formData.photo}
@@ -211,18 +209,18 @@ function AdminDashboard() {
   )}
 </div>
 
-                  <div className="mb-3">
-                    <label className="form-label">Description *</label>
-                    <textarea
+             <div className="mb-3">
+               <label className="form-label">Description *</label>
+                 <textarea
                       className={`form-control ${!formData.description && 'is-invalid'}`}
                       value={formData.description}
                       onChange={(e) => setFormData({...formData, description: e.target.value})}
                       rows="3"
                       required
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label className="form-label">Location *</label>
+                 />
+             </div>
+               <div className="mb-3">
+                  <label className="form-label">Location *</label>
                     <input
                       type="text"
                       className={`form-control ${!formData.location && 'is-invalid'}`}
@@ -230,7 +228,7 @@ function AdminDashboard() {
                       onChange={(e) => setFormData({...formData, location: e.target.value})}
                       required
                     />
-                  </div>
+                </div>
                   <div className="mb-3">
                     <label className="form-label">Email</label>
                     <input
